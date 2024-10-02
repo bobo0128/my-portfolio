@@ -1,24 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Suspense, lazy } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Navbar from "./components/navbar/MyNavbar";
+import ScrollToTop from "./components/ScrollToTop";
+import "./App.css";
+
+// Lazy load components
+const Home = lazy(() => import("./pages/Home"));
+const AboutMe = lazy(() => import("./pages/AboutMe"));
+const Projects = lazy(() => import("./pages/Projects"));
+const MyPlayground = lazy(() => import("./pages/MyPlayground"));
+const Experience = lazy(() => import("./pages/Experience"));
+const ContactMe = lazy(() => import("./pages/ContactMe"));
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="app">
+        <Navbar />
+        <Suspense fallback={<div>Loading...</div>}>
+          <div className="content">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<AboutMe />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/playground" element={<MyPlayground />} />
+              <Route path="/experience" element={<Experience />} />
+              <Route path="/contact" element={<ContactMe />} />
+            </Routes>
+          </div>
+        </Suspense>
+        <SocialMedia />
+        <ScrollToTop />
+      </div>
+    </Router>
   );
 }
 
