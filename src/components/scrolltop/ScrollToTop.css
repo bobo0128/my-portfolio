@@ -1,0 +1,12 @@
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 3;
+}
+
+.scroll-to-top svg {
+  font-size: 40px;
+  cursor: pointer;
+  color:white;
+}

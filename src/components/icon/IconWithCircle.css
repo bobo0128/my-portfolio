@@ -1,0 +1,26 @@
+.icon-circle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #df6734; /* Custom background color */
+    color: white; /* Icon color */
+    border-radius: 50%; /* Makes the container a circle */
+    width: 60px;
+    height: 60px;
+    font-size: 24px; /* Adjust icon size */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), /* Darker shadow for depth */
+                inset 0 1px 3px rgba(255, 255, 255, 0.5); /* Inner shadow for a 3D effect */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+  
+  .icon-circle:hover {
+    transform: translateY(-4px); /* Slight lift effect when hovering */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.763), /* Darker shadow on hover */
+                inset 0 1px 3px rgba(255, 255, 255, 0.6); /* Slightly stronger inner shadow */
+  }
+  
+  /* Optional gradient background for more 3D feel */
+  .icon-circle {
+    background: linear-gradient(145deg, #f09456, #c0542c);
+  }
+  
