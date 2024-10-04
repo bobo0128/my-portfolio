@@ -3,19 +3,23 @@ import { Navbar, Nav } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import { FaBars } from 'react-icons/fa';
 import './PortfolioNavbar.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faHouse} from '@fortawesome/free-solid-svg-icons';
-import IconWithCircle from '../icon/IconWithCircle';
+import {faHouse, faPersonSnowboarding, faSquarePollHorizontal, faChartPie, faGraduationCap} from '@fortawesome/free-solid-svg-icons';
+// import IconWithCircle from '../icon/IconWithCircle';
 import IconWithButton from '../icon/IconWithButton';
 
 function PortfolioNavbar() {
   const [expanded, setExpanded] = useState(false);
 
+  const [activeBtn, setActiveBtn] = useState(null);
+
+  const handleBtnClick = (iconName) => {
+    setActiveBtn(iconName);
+  }
+
   const toggleNavbar = () => setExpanded(!expanded);
 
   return (
     <div className="d-flex">
-      {/* Sidebar for large screens */}
       <Navbar
         variant="dark"
         expand="lg"
@@ -23,26 +27,23 @@ function PortfolioNavbar() {
         className="d-none d-lg-flex flex-column vh-100 position-fixed"
       >
         <Nav className="flex-column w-100">
-          <LinkContainer to="/">
-            <Nav.Link><FontAwesomeIcon icon={faHouse} size="2xl" style={{color: "#f09456",}} /></Nav.Link>
-          </LinkContainer>
-          <LinkContainer to="/">
+          {/* <LinkContainer to="/">
             <Nav.Link><IconWithCircle iconName={faHouse}/></Nav.Link>
-          </LinkContainer>
+          </LinkContainer> */}
           <LinkContainer to="/">
-            <Nav.Link><IconWithButton iconName={faHouse}/></Nav.Link>
+            <Nav.Link><IconWithButton iconName={faHouse} isActive={activeBtn === faHouse} onClick={()=>{handleBtnClick(faHouse)}}/></Nav.Link>
           </LinkContainer>
           <LinkContainer to="/about">
-            <Nav.Link>About</Nav.Link>
+            <Nav.Link><IconWithButton iconName={faPersonSnowboarding} isActive={activeBtn === faPersonSnowboarding} onClick={()=>{handleBtnClick(faPersonSnowboarding)}}/></Nav.Link>
           </LinkContainer>
           <LinkContainer to="/skills">
-            <Nav.Link>Skills</Nav.Link>
+            <Nav.Link><IconWithButton iconName={faChartPie} isActive={activeBtn === faChartPie} onClick={()=>{handleBtnClick(faChartPie)}}/></Nav.Link>
           </LinkContainer>
           <LinkContainer to="/experience">
-            <Nav.Link>Experience</Nav.Link>
+            <Nav.Link><IconWithButton iconName={faSquarePollHorizontal} isActive={activeBtn === faSquarePollHorizontal} onClick={()=>{handleBtnClick(faSquarePollHorizontal)}}/></Nav.Link>
           </LinkContainer>
           <LinkContainer to="/education">
-            <Nav.Link>Education</Nav.Link>
+            <Nav.Link><IconWithButton iconName={faGraduationCap} isActive={activeBtn === faGraduationCap} onClick={()=>{handleBtnClick(faGraduationCap)}}/></Nav.Link>
           </LinkContainer>
         </Nav>
       </Navbar>
