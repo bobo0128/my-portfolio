@@ -1,0 +1,48 @@
+/* Sticky hamburger menu on top-right */
+.custom-navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000; /* Ensure it's always on top */
+}
+
+/* Hamburger icon styling */
+.hamburger-menu {
+  position: relative;
+  padding: 0px;
+}
+
+.hamburger-icon {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* Initially hide the menu */
+.menu-links {
+  display: none;
+  flex-direction: row; /* Horizontal menu */
+  position: absolute;
+  top: 40px; /* Show under the hamburger icon */
+  right: 0;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+/* On hover, display the menu */
+.hamburger-menu:hover .menu-links {
+  display: flex;
+}
+
+/* Menu item styling */
+.menu-links .nav-link {
+  padding: 10px;
+  white-space: nowrap; /* Prevents text from wrapping */
+}
+
+/* Optional: Add some padding and margin for larger screen */
+@media (min-width: 992px) {
+  .menu-links .nav-link {
+    padding: 10px 15px;
+  }
+}
