@@ -2,8 +2,11 @@
   position: relative;
   min-height: 100vh;
   overflow: hidden;
-  background-color: rgb(231, 151, 225);
   background-color: black;
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+  flex-direction: row;
 }
 
 .background-overlay {
@@ -15,7 +18,7 @@
   background-image: url('./images/bg-2.jpg');
   background-size: cover;
   background-position: center;
-  opacity: 0.3;
+  opacity: 0.2;
   z-index: 2;
 }
 
@@ -39,29 +42,57 @@
 
 /* Content will be displayed on the right side */
 .content {
-  margin-left: 150px;
+  /* margin-left: 150px; */
   padding: 20px;
   flex-grow: 1;
   overflow-y: auto;
   z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 120px;
+  margin-right:100px;
+  flex-direction: column;
 }
 
 /* Social media icons fixed to the right */
 .social-media {
   position: fixed;
+  flex-shrink: 0;
   right: 20px;
   bottom: 20px;
+  z-index: 3;
 }
 
 @media (max-width: 992px) {
   /* For small screens, the navbar will collapse into a hamburger */
-  .navbar {
-    width: 100%;
-    position: static;
+  .app {
+    flex-direction: column; /* Change layout direction */
   }
-  
-  .content {
-    margin-left: 0;
+
+   .navbar {
+    width: 100%; /* Full width */
+    height: auto; /* Collapsed navbar */
+    position: relative; /* Not fixed */
     padding: 10px;
+  }
+  .social-media {
+    position: relative; /* Not fixed */
+    bottom: auto;
+    right: auto;
+    width: 100%;
+    text-align: center; /* Center social media icons */
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Even smaller screens */
+  .content {
+    padding: 5px;
+  }
+
+  .navbar {
+    padding: 5px;
   }
 }

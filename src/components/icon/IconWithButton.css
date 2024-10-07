@@ -2,9 +2,12 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-color: #df6734;
-    color: white; /* Icon color */
-    border: 2px solid #c0542c; /* Slightly darker border for depth */
+    /* background-color: #a15b92; */
+    /* background: linear-gradient(to left, #b576e9 0%, #0e2cc0 100%); */
+    background: linear-gradient(to left, #f0e656, #78c02c);
+    /* background: linear-gradient(145deg, #f0e656, #48b715);  */
+    color: black; /* Icon color */
+    border: 2px solid #78c02c; /* Slightly darker border for depth */
     border-radius: 8px;
     width: 60px; 
     height: 60px;
@@ -27,7 +30,7 @@
   }
 
   .icon-button.active {
-    background-color: #34c3df; /* Color when active */
-    border-color: #2ca0c0; /* Darker border when active */
+    background: linear-gradient(to right, #76e9ae 0%, #0e2cc0 100%);
+    border-color: #0e2cc0; /* Color when active */
   }
   

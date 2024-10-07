@@ -3,10 +3,10 @@
     align-items: center;
     justify-content: center;
     background-color: #df6734; /* Custom background color */
-    color: white; /* Icon color */
+    color: black; /* Icon color */
     border-radius: 50%; /* Makes the container a circle */
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     font-size: 24px; /* Adjust icon size */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), /* Darker shadow for depth */
                 inset 0 1px 3px rgba(255, 255, 255, 0.5); /* Inner shadow for a 3D effect */
@@ -21,6 +21,7 @@
   
   /* Optional gradient background for more 3D feel */
   .icon-circle {
-    background: linear-gradient(145deg, #f09456, #c0542c);
+    background: linear-gradient(145deg, #f0e656, #78c02c);
+    margin-bottom: 10px;
   }
   
