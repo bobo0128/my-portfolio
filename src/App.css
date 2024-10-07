@@ -4,8 +4,9 @@
   overflow: hidden;
   background-color: black;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center;
+  align-items: center; */
+  flex-direction: row;
 }
 
 .background-overlay {
@@ -49,6 +50,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 120px;
+  margin-right:100px;
+  flex-direction: column;
 }
 
 /* Social media icons fixed to the right */
@@ -57,17 +61,38 @@
   flex-shrink: 0;
   right: 20px;
   bottom: 20px;
+  z-index: 3;
 }
 
 @media (max-width: 992px) {
   /* For small screens, the navbar will collapse into a hamburger */
-  .navbar {
-    width: 100%;
-    position: static;
+  .app {
+    flex-direction: column; /* Change layout direction */
   }
-  
-  .content {
-    margin-left: 0;
+
+   .navbar {
+    width: 100%; /* Full width */
+    height: auto; /* Collapsed navbar */
+    position: relative; /* Not fixed */
     padding: 10px;
+  }
+  .social-media {
+    position: relative; /* Not fixed */
+    bottom: auto;
+    right: auto;
+    width: 100%;
+    text-align: center; /* Center social media icons */
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Even smaller screens */
+  .content {
+    padding: 5px;
+  }
+
+  .navbar {
+    padding: 5px;
   }
 }
