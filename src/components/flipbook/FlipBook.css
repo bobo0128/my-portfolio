@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .flipBookContainer {
+    /* or any other parent wrapper */
+    margin: 0;
+    display: flex;
+    height: 300vh;
+    width: 300vh;
+    perspective: 1000px;
+    font: 16px/1.4 sans-serif;
+    overflow: hidden;
+    background-color: #232425;
+  }
+  
+  .book {
+    position:relative;
+    display: flex;
+    margin: auto;
+    width: 80vh;
+    height: 60vh;
+    /*1* let pointer event go trough pages of lower Z than .book */
+    pointer-events: none;
+    transform-style: preserve-3d;
+    transition: translate 1s;
+    translate: calc(min(var(--c), 1) * 50%) 0%;
+    /* DEMO ONLY: incline on the X axis for pages preview */
+    rotate: 1 0 0 30deg;
+    border-radius: 0 15px 15px 0;
+  }
+  
+  .page {
+    --z: 5px;
+    flex: none;
+    display: flex;
+    width: 100%;
+    pointer-events: all;
+    user-select: none;
+    transform-style: preserve-3d;
+    border: 1px solid #0008;
+    border-radius: 0 15px 15px 0;
+    transform-origin: left center;
+    transition: transform 1s, rotate 1s ease-in calc((min(var(--i), var(--c)) - max(var(--i), var(--c))) * 50ms);
+    translate: calc(var(--i) * -100%) 0px 0px;
+    transform: translateZ(calc((var(--c) - var(--i) - 0.5) * var(--z)));
+    rotate: 0 1 0 calc(clamp(0, var(--c) - var(--i), 1) * -180deg);
+    cursor: pointer;
+  }
+  
+  .front,
+  .back {
+    flex: none;
+    width: 100%;
+    padding: 2rem;
+    backface-visibility: hidden;
+    /* background-color: #e1de95; */
+    background: linear-gradient(135deg, #c7e9fb, #a6defa, #80d4f9, #5bc9f8, #35bef7);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    translate: 0px;
+  }
+  
+  .back {
+    /* background-image: linear-gradient(to right, #bebc22 80%, #ddd 100%); */
+    translate: -100% 0;
+    rotate: 0 1 0 180deg;
+  }
+  
+  .page img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  

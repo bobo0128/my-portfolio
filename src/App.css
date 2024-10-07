@@ -2,8 +2,10 @@
   position: relative;
   min-height: 100vh;
   overflow: hidden;
-  background-color: rgb(231, 151, 225);
   background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .background-overlay {
@@ -15,7 +17,7 @@
   background-image: url('./images/bg-2.jpg');
   background-size: cover;
   background-position: center;
-  opacity: 0.3;
+  opacity: 0.2;
   z-index: 2;
 }
 
@@ -39,16 +41,20 @@
 
 /* Content will be displayed on the right side */
 .content {
-  margin-left: 150px;
+  /* margin-left: 150px; */
   padding: 20px;
   flex-grow: 1;
   overflow-y: auto;
   z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Social media icons fixed to the right */
 .social-media {
   position: fixed;
+  flex-shrink: 0;
   right: 20px;
   bottom: 20px;
 }
