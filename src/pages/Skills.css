@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  text-align: center;
   flex-wrap: nowrap; /* Keep them in a row */
   gap: 20px;
 }
@@ -9,11 +10,19 @@
 .chart-container > div {
   flex: 1; /* Each chart will take equal width */
   min-width: 250px; /* Minimum width for each chart */
+  margin-top: 40px;
+  /* background-color: rgb(204, 198, 141); */
+  /* background-color: white; */
+  background: rgba(201, 200, 167, 0.3);
+  border-radius: 15px;
+  margin-left: 5px;
 }
 
 .chart-container > h1 {
   margin-bottom: 30px;
-  font-size: 2em;
+  font-size: 1em;
+  text-align: center;
+  align-items: center;
 }
 
 @media (max-width: 768px) {

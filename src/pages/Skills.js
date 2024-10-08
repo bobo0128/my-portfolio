@@ -14,7 +14,6 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1>My Skills</h1>
       <div className="chart-container">
         <SkillRingChart title="Frontend Skills" labels={frontendSkills} data={frontendData} />
         <SkillRingChart title="Backend Skills" labels={backendSkills} data={backendData} />

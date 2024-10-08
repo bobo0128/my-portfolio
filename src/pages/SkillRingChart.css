@@ -1,0 +1,11 @@
+/* .ringchart h3 {
+    font-size: 1.5em;
+} */
+
+.chart-title {
+    margin-top: 20px;
+    margin-bottom: 0px; /* Adjust this value to make the title closer */
+    color: white;
+    font-size: 1.5rem; /* You can adjust the font size if needed */
+    text-align: center;
+}
