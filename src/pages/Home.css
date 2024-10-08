@@ -4,6 +4,20 @@
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Subtle shadow for visibility */
   }
   
-  .wave-emoji {
-    font-size: 2.5rem; /* Increase emoji size to match text */
+  .hello-wave {
+    display: inline-block; /* Ensures the span is treated as a block for transform */
+    animation: wave 2s infinite; /* 2-second animation looping infinitely */
+    transform-origin: 70% 70%; /* Defines the pivot point for the waving motion */
+  }
+  
+  /* Keyframes for the wave effect */
+  @keyframes wave {
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(14deg); }
+    20% { transform: rotate(-8deg); }
+    30% { transform: rotate(14deg); }
+    40% { transform: rotate(-4deg); }
+    50% { transform: rotate(10deg); }
+    60% { transform: rotate(0deg); } /* Returns to neutral */
+    100% { transform: rotate(0deg); }
   }

@@ -5,6 +5,8 @@ import ScrollToTop from "./components/scrolltop/ScrollToTop";
 import SocialMedia from "./components/socialMedia/SocialMedia";
 import VideoBackground from "./components/background/VideoBackground";
 import "./App.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 // Lazy load components
 const Home = lazy(() => import("./pages/Home"));

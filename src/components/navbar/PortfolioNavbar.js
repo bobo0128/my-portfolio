@@ -4,7 +4,7 @@ import { LinkContainer } from 'react-router-bootstrap';
 import { FaBars } from 'react-icons/fa';
 import './PortfolioNavbar.css';
 import {faHouse, faPersonSnowboarding, faSquarePollHorizontal, faChartPie, faGraduationCap} from '@fortawesome/free-solid-svg-icons';
-// import IconWithCircle from '../icon/IconWithCircle';
+import IconWithCircle from '../icon/IconWithCircle';
 import IconWithButton from '../icon/IconWithButton';
 
 function PortfolioNavbar() {
@@ -31,19 +31,19 @@ function PortfolioNavbar() {
             <Nav.Link><IconWithCircle iconName={faHouse}/></Nav.Link>
           </LinkContainer> */}
           <LinkContainer to="/">
-            <Nav.Link><IconWithButton iconName={faHouse} isActive={activeBtn === faHouse} onClick={()=>{handleBtnClick(faHouse)}}/></Nav.Link>
+            <Nav.Link><IconWithCircle iconName={faHouse} isActive={activeBtn === faHouse} onClick={()=>{handleBtnClick(faHouse)}}/></Nav.Link>
           </LinkContainer>
           <LinkContainer to="/about">
-            <Nav.Link><IconWithButton iconName={faPersonSnowboarding} isActive={activeBtn === faPersonSnowboarding} onClick={()=>{handleBtnClick(faPersonSnowboarding)}}/></Nav.Link>
+            <Nav.Link><IconWithCircle iconName={faPersonSnowboarding} isActive={activeBtn === faPersonSnowboarding} onClick={()=>{handleBtnClick(faPersonSnowboarding)}}/></Nav.Link>
           </LinkContainer>
           <LinkContainer to="/skills">
-            <Nav.Link><IconWithButton iconName={faChartPie} isActive={activeBtn === faChartPie} onClick={()=>{handleBtnClick(faChartPie)}}/></Nav.Link>
+            <Nav.Link><IconWithCircle iconName={faChartPie} isActive={activeBtn === faChartPie} onClick={()=>{handleBtnClick(faChartPie)}}/></Nav.Link>
           </LinkContainer>
           <LinkContainer to="/experience">
-            <Nav.Link><IconWithButton iconName={faSquarePollHorizontal} isActive={activeBtn === faSquarePollHorizontal} onClick={()=>{handleBtnClick(faSquarePollHorizontal)}}/></Nav.Link>
+            <Nav.Link><IconWithCircle iconName={faSquarePollHorizontal} isActive={activeBtn === faSquarePollHorizontal} onClick={()=>{handleBtnClick(faSquarePollHorizontal)}}/></Nav.Link>
           </LinkContainer>
           <LinkContainer to="/education">
-            <Nav.Link><IconWithButton iconName={faGraduationCap} isActive={activeBtn === faGraduationCap} onClick={()=>{handleBtnClick(faGraduationCap)}}/></Nav.Link>
+            <Nav.Link><IconWithCircle iconName={faGraduationCap} isActive={activeBtn === faGraduationCap} onClick={()=>{handleBtnClick(faGraduationCap)}}/></Nav.Link>
           </LinkContainer>
         </Nav>
       </Navbar>
