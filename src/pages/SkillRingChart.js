@@ -51,8 +51,8 @@ const SkillRingChart = ({ title, labels, data }) => {
     },
     layout: {
         padding: {
-            left: 20,
-            right:20
+            left: 10,
+            right:10
         }
     }
   };
