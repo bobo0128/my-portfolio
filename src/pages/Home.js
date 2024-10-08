@@ -11,7 +11,7 @@ function Home() {
         <Row className="text-center">
           <Col>
             <h1 className="intro-text">
-              Hi, I am XXX <span className="hello-wave">👋</span>
+              Hi, I am XXX. A full-stack developer. <span className="hello-wave">👋</span>
             </h1>
           </Col>
         </Row>
