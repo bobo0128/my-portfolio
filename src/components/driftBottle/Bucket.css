@@ -1,0 +1,78 @@
+.water {
+    margin: auto;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: #80c5de;
+    box-shadow: inset 0 0 50px #1c637c;
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
+    overflow: visible; /* To keep the icons inside the bucket */
+    z-index: 1; /* Ensures the water stays below the icons */
+}
+
+.water::before {
+    content: "";
+    width: 200%;
+    height: 200%;
+    background-color: #ececec;
+    position: absolute;
+    top: -150%;
+    left: -50%;
+    border-radius: 40%;
+    animation: anim 12s linear infinite;
+    z-index: 0; /* Water stays in the background */
+}
+
+.water::after {
+    content: "";
+    width: 204%;
+    height: 204%;
+    background-color: #ececec80;
+    position: absolute;
+    top: -150%;
+    left: -52%;
+    border-radius: 40%;
+    animation: anim 12s linear infinite;
+    animation-delay: 0.5s;
+    z-index: 0; /* Water stays in the background */
+}
+
+/* Icon floating/jumping animation */
+.icon {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    animation: float 3s ease-in-out infinite;
+    z-index: 2000; /* Icons appear above the water */
+    top: 50%; /* Adjust to make it visible */
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centers the icons */
+  font-size:48px;
+  color:red;
+}
+
+.icon.react { left: 20%; animation-delay: 0s; }
+.icon.node { left: 40%; animation-delay: 0.5s; }
+.icon.java { left: 60%; animation-delay: 1s; }
+.icon.express { left: 80%; animation-delay: 1.5s; }
+
+@keyframes anim {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-30px); /* Icon moves up */
+    }
+    100% {
+        transform: translateY(0); /* Icon moves down */
+    }
+}

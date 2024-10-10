@@ -1,0 +1,100 @@
+.battery-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 220px;
+    /* background-color: #d4b518; */
+    background-image: url('../../images/battery.png'); /* Add your background image */
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    position: relative;
+}
+
+/* Battery body */
+.battery {
+    width: 90px;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0); /* Transparent battery body */
+    /* border: 2px solid #d4b518; */
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 10px;
+}
+
+/* Battery half-circle on top */
+.battery::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 25px;
+    /* background-color: #3498db; */
+    border-radius: 50px 50px 0 0; /* Half-circle */
+    /* border: 2px solid #3498db; */
+}
+
+/* Battery positive terminal */
+.battery::after {
+    content: "";
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 10px;
+    background-color: #333;
+    border-radius: 2px;
+}
+
+/* Icons animation (representing charge level) */
+.icon {
+    font-size: 20px;
+    color: #6144c7;
+    position: absolute;
+    bottom: 0;
+    animation: charge 5s ease-in-out infinite;
+    opacity: 0;
+    z-index: 1; /* Ensures icons are above the battery body */
+    
+    /* Circle around the icon */
+    width: 30px;
+    height: 30px;
+    background-color: #e6c148; /* Bright background color */
+    border-radius: 50%; /* Creates the circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Optional shadow for visibility */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.icon-0 { animation-delay: 0s; left: 15%; }
+.icon-1 { animation-delay: 0.5s; left: 35%; }
+.icon-2 { animation-delay: 1s; left: 55%; }
+.icon-3 { animation-delay: 1.5s; left: 75%; }
+.icon-4 { animation-delay: 2s; left: 45%; }
+
+/* Charging animation */
+@keyframes charge {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-1000%);
+        opacity: 1;
+    }
+}

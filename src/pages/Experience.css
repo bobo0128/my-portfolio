@@ -1,0 +1,30 @@
+/* Portfolio.css */
+.top-part {
+    padding: 50px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .drift-bottle-col {
+    text-align: center;
+  }
+  
+  .summary-col {
+    padding: 20px;
+  }
+  
+  .bottom-part {
+    padding: 30px;
+  }
+  
+  @media (max-width: 768px) {
+    .top-part {
+      flex-direction: column;
+    }
+  
+    .drift-bottle-col,
+    .summary-col {
+      width: 100%;
+    }
+  }
+  
