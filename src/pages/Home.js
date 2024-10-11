@@ -10,9 +10,10 @@ function Home() {
         {/* Top Part */}
         <Row className="text-center">
           <Col>
-            <h1 className="intro-text">
-              Hi, I am XXX. A full-stack developer. <span className="hello-wave">👋</span>
-            </h1>
+            <h3 className="intro-text">
+              Hi, I am Yingbo. A Software Engineer. A full-stack developer. 
+              {/* <span className="hello-wave">👋</span> */}
+            </h3>
           </Col>
         </Row>
 

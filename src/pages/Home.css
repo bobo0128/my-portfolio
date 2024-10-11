@@ -1,13 +1,27 @@
 .intro-text {
-    font-size: 3rem;
-    color: #ffffff;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Subtle shadow for visibility */
+    font-size: 2rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, white, #8dc2dd, white);
+    background-size: 200% 100%; /* Animate across the full width */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: colorAnimation 6s ease-in-out infinite;
+  }
+
+  @keyframes colorAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
   }
   
   .hello-wave {
-    display: inline-block; /* Ensures the span is treated as a block for transform */
-    animation: wave 2s infinite; /* 2-second animation looping infinitely */
-    transform-origin: 70% 70%; /* Defines the pivot point for the waving motion */
+    font-size: 1.5rem;
   }
   
   /* Keyframes for the wave effect */
