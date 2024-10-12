@@ -4,15 +4,24 @@ import { LinkContainer } from 'react-router-bootstrap';
 import { FaBars } from 'react-icons/fa';
 import './PortfolioNavbar.css';
 import {faHouse, faEnvelope, faSquarePollHorizontal, faChartPie, faCubes} from '@fortawesome/free-solid-svg-icons';
+import { menus } from '../../utils/Constants';
 import IconWithCircle from '../icon/IconWithCircle';
 
-function PortfolioNavbar() {
+const PortfolioNavbar = ({activeSection}) => {
+
+  console.log("activeSection:"+activeSection);
   const [expanded, setExpanded] = useState(false);
 
   const [activeBtn, setActiveBtn] = useState(null);
 
-  const handleBtnClick = (iconName) => {
+  const handleBtnClick = (iconName, sectionId) => {
     setActiveBtn(iconName);
+    const section = document.getElementById(sectionId);
+    if(section) {
+      section.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
   }
 
   const toggleNavbar = () => setExpanded(!expanded);
@@ -26,21 +35,24 @@ function PortfolioNavbar() {
         className="d-none d-lg-flex flex-column vh-100 position-fixed"
       >
         <Nav className="flex-column w-100">
-          <LinkContainer to="/">
-            <Nav.Link title="Home"><IconWithCircle iconName={faHouse} isActive={activeBtn === faHouse} onClick={()=>{handleBtnClick(faHouse)}}/></Nav.Link>
-          </LinkContainer>
-          <LinkContainer to="/skills">
-            <Nav.Link title="Skills"><IconWithCircle iconName={faChartPie} isActive={activeBtn === faChartPie} onClick={()=>{handleBtnClick(faChartPie)}}/></Nav.Link>
-          </LinkContainer>
-          <LinkContainer to="/experience">
-            <Nav.Link title="Experience & Education"><IconWithCircle iconName={faSquarePollHorizontal} isActive={activeBtn === faSquarePollHorizontal} onClick={()=>{handleBtnClick(faSquarePollHorizontal)}}/></Nav.Link>
-          </LinkContainer>
-          <LinkContainer to="/playground">
-            <Nav.Link title="My playground"><IconWithCircle iconName={faCubes} isActive={activeBtn === faCubes} onClick={()=>{handleBtnClick(faCubes)}}/></Nav.Link>
-          </LinkContainer>
-          <LinkContainer to="/contact">
-            <Nav.Link title="Contact Me"><IconWithCircle iconName={faEnvelope} isActive={activeBtn === faEnvelope} onClick={()=>{handleBtnClick(faEnvelope)}}  /></Nav.Link>
-          </LinkContainer>
+          {
+            menus.map((menu,index) => {
+              const {id, href, icon, textValue } = menu;
+              return (
+                <Nav.Link key={id} href={href}><IconWithCircle iconName={icon} isActive={activeBtn === icon || activeSection === id} onClick={()=>{handleBtnClick(icon, id)}} tooltipText={textValue}/></Nav.Link>
+              );
+            })
+          }
+            {/* <Nav.Link href="#home"><IconWithCircle iconName={faHouse} isActive={activeBtn === faHouse} onClick={()=>{handleBtnClick(faHouse)}} tooltipText="Home"/></Nav.Link>
+            <Nav.Link href="#skills"><IconWithCircle iconName={faChartPie} isActive={activeBtn === faChartPie} onClick={()=>{handleBtnClick(faChartPie)}} tooltipText="Skills" /></Nav.Link>
+
+
+            <Nav.Link href="#experience"><IconWithCircle iconName={faSquarePollHorizontal} isActive={activeBtn === faSquarePollHorizontal} onClick={()=>{handleBtnClick(faSquarePollHorizontal)}} tooltipText="Experience" /></Nav.Link>
+
+
+            <Nav.Link href="#playground"><IconWithCircle iconName={faCubes} isActive={activeBtn === faCubes} onClick={()=>{handleBtnClick(faCubes)}} tooltipText="Park" /></Nav.Link>
+
+            <Nav.Link href="#contact"><IconWithCircle iconName={faEnvelope} isActive={activeBtn === faEnvelope} onClick={()=>{handleBtnClick(faEnvelope)}} tooltipText="Contact" /></Nav.Link> */}
         </Nav>
       </Navbar>
 
@@ -58,18 +70,10 @@ function PortfolioNavbar() {
         </Navbar.Toggle>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="flex-column">
-            <LinkContainer to="/">
-              <Nav.Link onClick={() => setExpanded(false)}>Home</Nav.Link>
-            </LinkContainer>
-            <LinkContainer to="/skills">
-              <Nav.Link onClick={() => setExpanded(false)}>Skills</Nav.Link>
-            </LinkContainer>
-            <LinkContainer to="/experience">
-              <Nav.Link onClick={() => setExpanded(false)}>Experience</Nav.Link>
-            </LinkContainer>
-            <LinkContainer to="/playground">
-              <Nav.Link onClick={() => setExpanded(false)}>Playground</Nav.Link>
-            </LinkContainer>
+              <Nav.Link href="#home" onClick={() => setExpanded(false)}>Home</Nav.Link>
+              <Nav.Link href="#skills" onClick={() => setExpanded(false)}>Skills</Nav.Link>
+              <Nav.Link href="#experience" onClick={() => setExpanded(false)}>Experience</Nav.Link>
+              <Nav.Link href="#playground" onClick={() => setExpanded(false)}>Playground</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

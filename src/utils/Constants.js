@@ -1,6 +1,56 @@
 import sandvine from "../images/logo/sandvine.jpg";
 import liitcare from "../images/logo/liitcare.png";
-import {createSkillGroup} from './helper';
+import { createSkillGroup } from "./helper";
+import React from "react";
+import {
+  faHouse,
+  faEnvelope,
+  faSquarePollHorizontal,
+  faChartPie,
+  faCubes,
+} from "@fortawesome/free-solid-svg-icons";
+
+export const menus = [
+  {
+    id: "home",
+    textValue: "Home",
+    component: React.lazy(() => import("../pages/Home")),
+    href: "#home",
+    icon: faHouse,
+  },
+
+  {
+    id: "skills",
+    textValue: "Skills",
+    component: React.lazy(() => import("../pages/Skills")),
+    href: "#skills",
+    icon: faChartPie,
+  },
+
+  {
+    id: "experience",
+    textValue: "Experience",
+    component: React.lazy(() => import("../pages/Experience")),
+    href: "#experience",
+    icon: faSquarePollHorizontal,
+  },
+
+  {
+    id: "playground",
+    textValue: "Playground",
+    component: React.lazy(() => import("../pages/MyPlayground")),
+    href: "#playground",
+    icon: faCubes,
+  },
+
+  {
+    id: "contact",
+    textValue: "Contact Me",
+    component: React.lazy(() => import("../pages/ContactMe")),
+    href: "#contact",
+    icon: faEnvelope,
+  },
+];
 
 export const experiences = [
   {
@@ -30,12 +80,22 @@ export const experiences = [
   },
 ];
 
-
-
 export const skillset = [
-  createSkillGroup ('Frontend Skills', ['React & Redux', 'JavaScript', 'TypeScript', 'HTML + CSS'], [2, 10, 1, 10]),
-  createSkillGroup ('Backend Skills', ['Java', 'Spring Boot', 'Node.js', 'Express.js', 'PHP', 'Python', 'Redis'], [10, 3, 2.5, 2, 0.5, 0.5, 2]),
-  createSkillGroup ("DevOps", ['Docker', 'Kubernetes', 'Jenkins', 'CI/CD Pipelines'], [2, 2, 1.5, 2]),
+  createSkillGroup(
+    "Frontend Skills",
+    ["React & Redux", "JavaScript", "TypeScript", "HTML + CSS"],
+    [2, 10, 1, 10]
+  ),
+  createSkillGroup(
+    "Backend Skills",
+    ["Java", "Spring Boot", "Node.js", "Express.js", "PHP", "Python", "Redis"],
+    [10, 3, 2.5, 2, 0.5, 0.5, 2]
+  ),
+  createSkillGroup(
+    "DevOps",
+    ["Docker", "Kubernetes", "Jenkins", "CI/CD Pipelines"],
+    [2, 2, 1.5, 2]
+  ),
 ];
 // const frontendSkills = ['React & Redux', 'JavaScript', 'TypeScript', 'HTML + CSS'];
 // const frontendData = [2, 10, 1, 10];
