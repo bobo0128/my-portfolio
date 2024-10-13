@@ -1,0 +1,60 @@
+/* ExperienceCard.css */
+.experience-card {
+    border: 1px solid #cce0ff; /* Light blue border */
+    border-radius: 8px;
+    background-color: white;
+    margin-bottom: 1.5rem;
+  }
+  
+  .experience-logo {
+    max-width: 100%;
+    border-radius: 4px;
+  }
+  
+  .experience-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #003366; /* Dark Blue */
+  }
+  
+  .company-name {
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  .experience-description {
+    font-size: 0.95rem;
+    color: #666;
+  }
+  
+  .experience-date,
+  .experience-location {
+    font-size: 0.85rem;
+    color: #999;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 767px) {
+    .experience-card {
+      padding: 1rem;
+    }
+  
+    .experience-title,
+    .company-name,
+    .experience-description {
+      text-align: left;
+    }
+  
+    .experience-date,
+    .experience-location {
+      text-align: left;
+      margin-top: 0.5rem;
+    }
+  
+    /* Add margin between logo and date/location on small screens */
+    .experience-logo + .d-md-none {
+      margin-top: 0.5rem;
+    }
+  }
+  

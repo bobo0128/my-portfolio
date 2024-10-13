@@ -1,0 +1,109 @@
+/* .bottle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 300px; 
+    background-color: #f0f0f0;
+    border-radius: 40px 40px 20px 20px;
+  } */
+
+.bottle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 300px;
+    /* background: linear-gradient(135deg, rgba(255, 255, 255, 1) 10%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.8) 70%, rgba(255, 255, 255, 0) 90%), #f0f0f0; */
+    border-radius: 40px 40px 20px 20px;
+    position: relative;
+    overflow: hidden;
+    animation: lightning-flash 3s infinite ease-in-out;
+}
+
+@keyframes lightning-flash {
+    0% {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 10%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.1) 70%, rgba(255, 255, 255, 0) 90%), #f0f0f0;
+    }
+
+    50% {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 1) 10%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 1) 70%, rgba(255, 255, 255, 0) 90%), #f0f0f0;
+    }
+
+    55% {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 10%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.2) 70%, rgba(255, 255, 255, 0) 90%), #f0f0f0;
+    }
+
+    100% {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 10%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.1) 70%, rgba(255, 255, 255, 0) 90%), #f0f0f0;
+    }
+}
+
+.bottle {
+    width: 120px;
+    height: 300px;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 40px 40px 20px 20px;
+    border: 2px solid #3498db;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    /* Align icons to the bottom of the bottle */
+    padding-bottom: 10px;
+    /* Add some padding at the bottom */
+}
+
+/* Icons animation */
+.icon {
+    font-size: 24px;
+    color: #3498db;
+    position: absolute;
+    bottom: 0;
+    animation: float 5s ease-in-out infinite;
+    opacity: 0;
+}
+
+.icon-0 {
+    animation-delay: 0s;
+    left: 20%;
+}
+
+.icon-1 {
+    animation-delay: 0.5s;
+    left: 40%;
+}
+
+.icon-2 {
+    animation-delay: 1s;
+    left: 60%;
+}
+
+.icon-3 {
+    animation-delay: 1.5s;
+    left: 30%;
+}
+
+.icon-4 {
+    animation-delay: 2s;
+    left: 50%;
+}
+
+/* Float Animation */
+@keyframes float {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-1000%);
+        opacity: 1;
+    }
+}

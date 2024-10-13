@@ -5,7 +5,8 @@ const FlipBook = () => {
   useEffect(() => {
     const flipBook = (elBook) => {
       const pageLen = elBook.querySelectorAll(".page").length;
-      elBook.style.setProperty("--c", 0); // Set current to the first page
+      
+      elBook.style.setProperty("--c", 1); // Set current to the first page
       elBook.querySelectorAll(".page").forEach((page, i) => {
         page.style.setProperty("--i", i);
         page.addEventListener("click", (evt) => {

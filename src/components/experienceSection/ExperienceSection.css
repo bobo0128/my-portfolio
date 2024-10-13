@@ -1,0 +1,59 @@
+/* ExperienceSection.css */
+
+.accordion-button {
+    background-color: white;
+    /* Change header background color */
+    color: rgb(24, 57, 156);
+    /* Change header text color */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* .accordion-button:hover {
+    background-color: #7398c0;
+    color: white;
+} */
+
+.accordion-button:not(.collapsed) {
+    background-color: #afbdcb;
+    /* Light background when expanded */
+    color: #071c32;
+    /* Dark blue text when expanded */
+}
+
+.accordion-button:focus {
+    outline: none;
+    box-shadow: none;
+    /* Remove outline if not needed */
+    background-color: white;
+    /* Dark blue when focused */
+    /* color: rgb(24, 57, 156); */
+    /* White text when focused */
+}
+
+.accordion-body {
+    background-color: #bfcfe0;
+    /* Change body background color */
+    color: #343a40;
+    /* Change body text color */
+}
+
+.card-title {
+    color: #007bff;
+    /* Change card title color */
+}
+
+.card-text {
+    color: #495057;
+    /* Change card text color */
+}
+
+/* Additional styles for hover effects */
+.accordion-button:hover {
+    /* background-color: #83aedb; */
+    /* Darken header on hover */
+}
+
+.card {
+    border: 1px solid #ced4da;
+    /* Card border color */
+}
