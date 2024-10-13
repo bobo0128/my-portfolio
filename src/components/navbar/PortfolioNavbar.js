@@ -1,22 +1,22 @@
 import React, { useState } from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
-import { LinkContainer } from 'react-router-bootstrap';
 import { FaBars } from 'react-icons/fa';
 import './PortfolioNavbar.css';
-import {faHouse, faEnvelope, faSquarePollHorizontal, faChartPie, faCubes} from '@fortawesome/free-solid-svg-icons';
 import { menus } from '../../utils/Constants';
 import IconWithCircle from '../icon/IconWithCircle';
 
-const PortfolioNavbar = ({activeSection}) => {
+const PortfolioNavbar = ({activeSection, setActiveSection, setUserClicked }) => {
 
   console.log("activeSection:"+activeSection);
   const [expanded, setExpanded] = useState(false);
 
-  const [activeBtn, setActiveBtn] = useState(null);
 
-  const handleBtnClick = (iconName, sectionId) => {
-    setActiveBtn(iconName);
-    const section = document.getElementById(sectionId);
+  const handleBtnClick = (id) => {
+    setActiveSection(id);
+    setUserClicked(true);
+    setTimeout(() => setUserClicked(false), 500);
+
+    const section = document.getElementById(id);
     if(section) {
       section.scrollIntoView({
         behavior: "smooth",
@@ -39,21 +39,11 @@ const PortfolioNavbar = ({activeSection}) => {
             menus.map((menu,index) => {
               const {id, href, icon, textValue } = menu;
               return (
-                <Nav.Link key={id} href={href}><IconWithCircle iconName={icon} isActive={activeBtn === icon || activeSection === id} onClick={()=>{handleBtnClick(icon, id)}} tooltipText={textValue}/></Nav.Link>
+                <Nav.Link key={id} href={href}><IconWithCircle iconName={icon} isActive={activeSection === id} onClick={()=>{handleBtnClick(icon, id)}} tooltipText={textValue}/></Nav.Link>
               );
             })
           }
-            {/* <Nav.Link href="#home"><IconWithCircle iconName={faHouse} isActive={activeBtn === faHouse} onClick={()=>{handleBtnClick(faHouse)}} tooltipText="Home"/></Nav.Link>
-            <Nav.Link href="#skills"><IconWithCircle iconName={faChartPie} isActive={activeBtn === faChartPie} onClick={()=>{handleBtnClick(faChartPie)}} tooltipText="Skills" /></Nav.Link>
-
-
-            <Nav.Link href="#experience"><IconWithCircle iconName={faSquarePollHorizontal} isActive={activeBtn === faSquarePollHorizontal} onClick={()=>{handleBtnClick(faSquarePollHorizontal)}} tooltipText="Experience" /></Nav.Link>
-
-
-            <Nav.Link href="#playground"><IconWithCircle iconName={faCubes} isActive={activeBtn === faCubes} onClick={()=>{handleBtnClick(faCubes)}} tooltipText="Park" /></Nav.Link>
-
-            <Nav.Link href="#contact"><IconWithCircle iconName={faEnvelope} isActive={activeBtn === faEnvelope} onClick={()=>{handleBtnClick(faEnvelope)}} tooltipText="Contact" /></Nav.Link> */}
-        </Nav>
+          </Nav>
       </Navbar>
 
       {/* Hamburger menu for small screens */}

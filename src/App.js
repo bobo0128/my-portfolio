@@ -9,20 +9,24 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   const [activeSecion, setActiveSection] = useState(null);
+  const [userClicked, setUserClicked] = useState(false);
 
   useEffect(() => {
     const sections = document.querySelectorAll("section");
+    console.log("Sections found:", sections);
     const options = {
-      threshold: 0.5,
+      threshold: 0.3,
     };
 
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          console.log("set active section:"+entry.target.id);
-          setActiveSection(entry.target.id);
-        }
-      });
+      if(!userClicked) {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            console.log("set active section:"+entry.target.id);
+            setActiveSection(entry.target.id);
+          }
+        });
+      }
     }, options);
 
     sections.forEach((section) => {
@@ -34,14 +38,14 @@ function App() {
         observer.unobserve(section);
       });
     };
-  }, []);
+  }, [userClicked]);
 
   return (
     <div className="app">
       <VideoBackground />
       <div className="background-overlay"></div>
-      <Navbar activeSection={activeSecion}/>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Navbar activeSection={activeSecion} setActiveSection={setActiveSection} setUserClicked={setUserClicked} />
+      {/* <Suspense fallback={<div>Loading...</div>}> */}
         <div className="content">
           {menus.map((menu, index) => {
             const { id, component: Component } = menu;
@@ -52,7 +56,7 @@ function App() {
             );
           })}
         </div>
-      </Suspense>
+      {/* </Suspense> */}
       <SocialMedia />
       <ScrollToTop />
     </div>
