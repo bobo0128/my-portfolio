@@ -7,6 +7,7 @@ import ExperienceSection from '../components/experienceSection/ExperienceSection
 import { Container, Row, Col } from 'react-bootstrap';
 import './Experience.css';
 import myImage from '../images/experience.jpg';
+import Timeline from '../components/timeline/Timeline';
 
 const Experience = () => {
   return (
@@ -24,7 +25,7 @@ const Experience = () => {
       {/* Bottom Part: Expandable Experience Sections */}
       <Row className="bottom-part">
         <Col>
-          <ExperienceSection />
+          <Timeline />
         </Col>
       </Row>
     </Container>

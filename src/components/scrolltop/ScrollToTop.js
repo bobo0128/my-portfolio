@@ -28,9 +28,9 @@ function ScrollToTop() {
       {isVisible && (
         <FaArrowUp
           onClick={scrollToTop}
-          size={30}
+          size={40}
           className="btn btn-dark rounded-circle"
-          style={{ cursor: 'pointer' }}
+          style={{ cursor: 'pointer'}}
         />
       )}
     </div>

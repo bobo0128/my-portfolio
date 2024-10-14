@@ -97,11 +97,4 @@ export const skillset = [
     [2, 2, 1.5, 2]
   ),
 ];
-// const frontendSkills = ['React & Redux', 'JavaScript', 'TypeScript', 'HTML + CSS'];
-// const frontendData = [2, 10, 1, 10];
 
-// const backendSkills = ['Java', 'Spring Boot', 'Node.js', 'Express.js'];
-// const backendData = [10, 3, 2.5, 2];
-
-// const devOpsSkills = ['Docker', 'Kubernetes', 'Jenkins', 'CI/CD Pipelines'];
-// const devOpsData = [2, 2, 1.5, 2];
