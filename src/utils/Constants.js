@@ -45,7 +45,7 @@ export const menus = [
 
   {
     id: "contact",
-    textValue: "Contact Me",
+    textValue: "Contact",
     component: React.lazy(() => import("../pages/ContactMe")),
     href: "#contact",
     icon: faEnvelope,

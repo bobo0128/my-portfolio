@@ -19,10 +19,10 @@ function App() {
     };
 
     const observer = new IntersectionObserver((entries) => {
-      if(!userClicked) {
+      if (!userClicked) {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            console.log("set active section:"+entry.target.id);
+            console.log("set active section:" + entry.target.id);
             setActiveSection(entry.target.id);
           }
         });
@@ -42,22 +42,33 @@ function App() {
 
   return (
     <div className="app">
-      <VideoBackground />
+      {/* <VideoBackground /> */}
       <div className="background-overlay"></div>
-      <Navbar activeSection={activeSecion} setActiveSection={setActiveSection} setUserClicked={setUserClicked} />
-      {/* <Suspense fallback={<div>Loading...</div>}> */}
-        <div className="content">
-          {menus.map((menu, index) => {
-            const { id, component: Component } = menu;
-            return (
-              <section id={id} key={id}>
-                <Component />
-              </section>
-            );
-          })}
+      <header className="navbar-social-container">
+        <div className="logo">My Logo</div>
+        <div className="nav-social-container">
+          <Navbar
+            activeSection={activeSecion}
+            setActiveSection={setActiveSection}
+            setUserClicked={setUserClicked}
+          />
+          <div className="social-media-icons">
+            <SocialMedia />
+          </div>
         </div>
+      </header>
+      {/* <Suspense fallback={<div>Loading...</div>}> */}
+      <div className="content">
+        {menus.map((menu, index) => {
+          const { id, component: Component } = menu;
+          return (
+            <section id={id} key={id}>
+              <Component />
+            </section>
+          );
+        })}
+      </div>
       {/* </Suspense> */}
-      <SocialMedia />
       <ScrollToTop />
     </div>
   );

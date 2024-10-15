@@ -1,7 +1,5 @@
 import React from 'react';
 // import DriftBottle from '../components/driftBottle/DriftBottle';
-import BottleAnimation from '../components/driftBottle/BottleAnimation';
-import Bucket from '../components/driftBottle/Bucket';
 import ExperienceSummary from '../components/experienceSummary/ExperienceSummary';
 import ExperienceSection from '../components/experienceSection/ExperienceSection';
 import { Container, Row, Col } from 'react-bootstrap';

@@ -1,3 +1,9 @@
 div {
     z-index: 3;
 }
+.social-media-icons {
+    display: flex; /* Enable flexbox for horizontal alignment */
+    gap: 5px; /* Optional: adds space between the icons */
+    justify-content: center; /* Center the icons horizontally */
+    /* align-items: center; Vertically center icons */
+  }

@@ -4,6 +4,10 @@
   top: 0;
   right: 0;
   z-index: 1000; /* Ensure it's always on top */
+  height: 100vh;
+  justify-content: space-between;
+  flex-direction: row;
+  display: flex;
 }
 
 /* Hamburger icon styling */
@@ -36,8 +40,12 @@
 
 /* Menu item styling */
 .menu-links .nav-link {
-  padding: 10px;
+  padding: 0px;
   white-space: nowrap; /* Prevents text from wrapping */
+}
+
+.nav-link {
+  padding: 5px 5px !important;
 }
 
 /* Optional: Add some padding and margin for larger screen */

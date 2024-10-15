@@ -6,9 +6,53 @@
   display: flex;
   /* justify-content: center;
   align-items: center; */
-  flex-direction: row;
+  flex-direction: column;
   scroll-behavior: smooth;
 }
+
+header.navbar-social-container {
+  display: inline-flex;
+  justify-content: space-between; /* Ensures the logo, navbar, and social media spread out */
+  align-items: center;
+  padding: 10px 10px;
+
+  width: 100%;
+  height: 8vh;
+  background: rgba(0, 0, 0, 0.9); /* Adjust based on your design */
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-social-container {
+  display: flex;
+  justify-content: flex-end; /* Push nav and social media to the right */
+  align-items: center;
+  gap: 20px; /* Adds spacing between nav and social media icons */
+}
+
+.navbar {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end; /* Align navbar to the right */
+  height: auto;
+  margin-right: 20px;
+}
+
+.social-media-icons {
+  flex: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 0.5vh;
+}
+
+.logo {
+  flex: 1; /* Logo on the left */
+  text-align: left;
+  background-color: white;
+}
+
 
 /* General section styling to occupy full viewport */
 section {
@@ -17,6 +61,7 @@ section {
   display: flex;     /* Enable flexbox for centering content */
   justify-content: center; /* Horizontally center content */
   align-items: center;     /* Vertically center content */
+  color: white;
 }
 
 .background-overlay {
@@ -25,7 +70,7 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('./images/bg-2.jpg');
+  /* background-image: url('./images/bg-2.jpg'); */
   background-size: cover;
   background-position: center;
   opacity: 0.2;
@@ -35,43 +80,13 @@ section {
 .content {
   position: relative;
   z-index: 3;
-  color: white;
+  flex: 1;
   padding: 20px;
-}
-
-/* Navbar will be fixed on the left side */
-.navbar {
-  width: 100px;
-  flex-shrink: 0;
-  height: 100vh;
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 3;
-}
-
-/* Content will be displayed on the right side */
-.content {
-  /* margin-left: 150px; */
-  padding: 20px;
-  flex-grow: 1;
   overflow-y: auto;
-  z-index: 3;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 120px;
-  margin-right:100px;
   flex-direction: column;
-}
-
-/* Social media icons fixed to the right */
-.social-media {
-  position: fixed;
-  flex-shrink: 0;
-  right: 20px;
-  bottom: 20px;
-  z-index: 3;
+  justify-content: center;
+  padding-top: 8vh;
 }
 
 @media (max-width: 992px) {

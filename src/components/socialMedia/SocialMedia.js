@@ -12,7 +12,7 @@ function SocialMedia() {
   };
 
   return (
-    <div className="d-none d-lg-flex flex-column position-fixed top-50 end-0 pe-3">
+    <div className='social-media-icons'>
       {/* <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"><FaLinkedin size={30} className="mb-2" /></a> */}
       <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"><IconWithButton iconName={faLinkedin} /></a>
       <a href="https://www.github.com" target="_blank" rel="noopener noreferrer"><IconWithButton iconName={faGithub} /></a>

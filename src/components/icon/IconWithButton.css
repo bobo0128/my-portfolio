@@ -1,5 +1,5 @@
 .icon-button {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     /* background-color: #a15b92; */
@@ -9,14 +9,15 @@
     color: white; /* Icon color */
     border: 2px solid #2c31c0; /* Slightly darker border for depth */
     border-radius: 8px;
-    width: 35px; 
-    height: 35px;
+    width: 30px; 
+    height: 30px;
     font-size: 24px;
     box-shadow: 0 4px 8px rgba(225, 230, 236, 0.2), /* Outer shadow for depth */
                 inset 0 1px 3px rgba(255, 255, 255, 0.6); /* Inner shadow for a pressed effect */
     transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
     cursor: pointer;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    margin-right: 5px;
   }
   
   .icon-button:hover {
