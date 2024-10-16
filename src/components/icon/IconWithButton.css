@@ -21,8 +21,8 @@
   }
   
   .icon-button:hover {
-    box-shadow: 0 6px 12px rgba(232, 223, 223, 0.763), /* Darker shadow on hover */
-                inset 0 1px 3px rgba(255, 255, 255, 0.4); /* Slightly less prominent inner shadow */
+    box-shadow: 0 12px 24px rgba(232, 223, 223, 0.763), /* Darker shadow on hover */
+                inset 0 3px 9px rgba(255, 255, 255, 0.4); /* Slightly less prominent inner shadow */
   }
   
   .icon-button:active {

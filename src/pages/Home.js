@@ -7,16 +7,6 @@ function Home() {
   return (
     <div >
       <Container fluid>
-        {/* Top Part */}
-        <Row className="text-center">
-          <Col>
-            <h3 className="intro-text">
-              Hi, I am Yingbo. A Software Engineer. A full-stack developer. 
-              {/* <span className="hello-wave">👋</span> */}
-            </h3>
-          </Col>
-        </Row>
-
         {/* Bottom Part: Book */}
         <Row className="justify-content-center">
           <Col className="book-container">

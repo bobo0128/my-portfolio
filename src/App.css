@@ -15,13 +15,13 @@ header.navbar-social-container {
   justify-content: space-between; /* Ensures the logo, navbar, and social media spread out */
   align-items: center;
   padding: 10px 10px;
-
   width: 100%;
   height: 8vh;
-  background: rgba(0, 0, 0, 0.9); /* Adjust based on your design */
+  background: rgba(0, 0, 0, 0.9); 
   position: fixed;
   top: 0;
   z-index: 1000;
+  background-color: transparent;
 }
 
 .nav-social-container {
@@ -57,36 +57,38 @@ header.navbar-social-container {
 /* General section styling to occupy full viewport */
 section {
   min-height: 100vh; /* Ensures each section takes at least the full viewport height */
-  padding: 100px 0;  /* Prevent content from touching edges */
+  padding: 10px 0;  /* Prevent content from touching edges */
   display: flex;     /* Enable flexbox for centering content */
   justify-content: center; /* Horizontally center content */
   align-items: center;     /* Vertically center content */
-  color: white;
+  /* color: white; */
+  background-image: url('./images/bg-6.jpg');
+  background-size: cover;
+  background-position: center;
+
 }
 
-.background-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  /* background-image: url('./images/bg-2.jpg'); */
+/* .background-overlay {
   background-size: cover;
   background-position: center;
   opacity: 0.2;
-  z-index: 2;
-}
+  z-index: 999;
+} */
 
 .content {
   position: relative;
   z-index: 3;
   flex: 1;
-  padding: 20px;
+  padding: 0px;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding-top: 8vh;
+  /* background-image: url('./images/10955.jpg'); */
+  /* background-color: black; */
+  background-size: cover;
+  background-position: center;
 }
 
 @media (max-width: 992px) {

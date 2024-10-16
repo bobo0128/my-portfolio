@@ -34,8 +34,18 @@ const FlipBook = () => {
             <h3>2024.<br />First edition</h3>
           </div>
           <div className="back">
-            <h2>Introduction</h2>
-            <p>A software engineer by profession, a mother by heart, and a lover of both dogs and adventure. I code with passion, raise a family with love, and carve my way through snowy mountains. Welcome to my story.</p>
+            <h2>I AM YINGBO LIU, A ...</h2>
+            <p>software engineer with over 10 years of experience in full-stack development. Proven expertise in designing, developing, and maintaining complex applications across diverse industries. Proficient in a variety of programming languages and frameworkds.
+              I AM ALSO A ...</p>
+          </div>
+        </div>
+
+        <div className="page">
+          <div className="front">
+          <img src={`${process.env.PUBLIC_URL}/mybio.jpg`} alt="Img 1" />
+          </div>
+          <div className="back">
+            <p>MOTHER by heart, and a LOVER of both dogs and adventure. I code with passion, raise a family with love, and carve my way through snowy mountains. Welcome to my story.</p>
           </div>
         </div>
 
@@ -44,8 +54,7 @@ const FlipBook = () => {
           <img src="https://picsum.photos/500/400" alt="Img 1" />
           </div>
           <div className="back">
-            <h2>The Coder's World</h2>
-            <p>Coding is like second nature to me. I love crafting solutions, solving problems, and building ideas. Each line of code represents a piece of the puzzle that makes our digital world come to life.</p>
+          <img src={`${process.env.PUBLIC_URL}/holdhands.jpg`}/>
           </div>
         </div>
 
@@ -65,13 +74,13 @@ const FlipBook = () => {
             <p>I’ve always been a dog lover. My loyal canine companion is a constant source of comfort during late-night coding sessions and family moments. He’s a part of the family and an important part of my life.</p>
           </div>
           <div className="back">
-          <img src={`${process.env.PUBLIC_URL}/snowboarding.jpg`}/>
+          <p>Snowboarding is my escape. There’s nothing like the rush of fresh snow under my board as I race down Calgary’s breathtaking mountains. It’s something I love to share with my family, a sport that brings us closer.</p>
           </div>
         </div>
 
         <div className="page">
           <div className="front">
-          <p>Snowboarding is my escape. There’s nothing like the rush of fresh snow under my board as I race down Calgary’s breathtaking mountains. It’s something I love to share with my family, a sport that brings us closer.</p>
+          <img src={`${process.env.PUBLIC_URL}/snowboarding.jpg`}/>
           </div>
           <div className="back">
             <h3>To Be Continued…</h3>
