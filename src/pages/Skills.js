@@ -1,5 +1,5 @@
 import React from 'react';
-import SkillRingChart from './SkillRingChart';
+import SkillRingChart from '../components/ringchart/SkillRingChart';
 import { skillset } from '../utils/Constants';
 import './Skills.css';
 
