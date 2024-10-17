@@ -55,7 +55,7 @@
   }
 
   .page h1 {
-    color: rgb(133, 124, 107);
+    color: rgb(238, 217, 221);
   }
   
   .front,
@@ -65,7 +65,7 @@
     padding: 2rem;
     backface-visibility: hidden;
     /* background-color: #e1de95; */
-    background: linear-gradient(135deg, #c7e9fb, #a6defa, #80d4f9, #5bc9f8, #35bef7);
+    background: linear-gradient(135deg, #1e0938, #c8b8d2, white, #e673a2, #f01d1d);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     translate: 0px;
   }
@@ -81,8 +81,8 @@
       -webkit-text-stroke: 0.09375rem #0d1b1e;
       -o-text-stroke: 0.09375rem #0d1b1e;
       text-stroke: 0.09375rem #0d1b1e;
-      color: #f2cee6;
-      text-shadow: 5px 5px 0px #2dc7ff;
+      color: #c0dfe1;
+      text-shadow: 5px 5px 0px #09010e;
   }
   
   .back {

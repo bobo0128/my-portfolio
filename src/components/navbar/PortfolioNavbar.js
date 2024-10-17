@@ -4,6 +4,7 @@ import { FaBars } from 'react-icons/fa';
 import './PortfolioNavbar.css';
 import { menus } from '../../utils/Constants';
 import IconWithCircle from '../icon/IconWithCircle';
+import IconWithRectangle from '../icon/IconWithRectangle';
 
 const PortfolioNavbar = ({activeSection, setActiveSection, setUserClicked }) => {
 
@@ -32,14 +33,14 @@ const PortfolioNavbar = ({activeSection, setActiveSection, setUserClicked }) => 
         variant="dark"
         expand="lg"
         expanded={expanded}
-        className="d-none d-lg-flex flex-column vh-100 position-fixed"
+        className="navbar-denter"
       >
-        <Nav className="flex-column w-100">
+        <Nav className="flex-row w-100">
           {
             menus.map((menu,index) => {
               const {id, href, icon, textValue } = menu;
               return (
-                <Nav.Link key={id} href={href}><IconWithCircle iconName={icon} isActive={activeSection === id} onClick={()=>{handleBtnClick(icon, id)}} tooltipText={textValue}/></Nav.Link>
+                <Nav.Link key={id} href={href} className="custom-nav-link"><IconWithRectangle iconName={icon} isActive={activeSection === id} onClick={()=>{handleBtnClick(icon, id)}} tooltipText={textValue}/></Nav.Link>
               );
             })
           }

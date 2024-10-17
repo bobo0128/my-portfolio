@@ -1,0 +1,85 @@
+.contact-form-container {
+    max-width: 600px; /* Adjust the form's width */
+    margin: 0 auto;   /* Center the form */
+    /* background-color: #f9f9f9; */
+    border-radius: 10px;
+    border: 1px;
+  }
+  
+  .contact-form-container form {
+    padding: 20px; /* Padding inside the form */
+  }
+  
+  .contact-form-container .form-control {
+    font-size: 10px; /* Change font size for input fields */
+    /* color: #f6eeee; */
+    border-radius: 20px; /* Rounder input borders */
+    /* background-color: #e0e5e8; */
+  }
+
+  .contact-form-container .form-control {
+    background-color: #322e2e; /* Background color */
+    font-size: 16px; /* Change font size */
+    font-family: 'Arial', sans-serif; /* Change font family */
+    color:rgb(223, 211, 211);
+    border: none; /* Remove the border */
+    border-radius: 20px; /* Remove border-radius if needed */
+    padding: 10px; /* Add some padding for better appearance */
+    box-shadow: none; /* Remove shadow */
+  }
+
+  .contact-form-container .form-control::placeholder {
+    color: #7a969a;
+    font-size: x-small;
+  }
+
+  
+  .contact-form-container .form-control:focus {
+    border-color: #007bff; /* Custom border color when focused */
+    box-shadow: none; /* Remove default shadow */
+  }
+  
+  .contact-form-container .form-label {
+    font-weight: bold;
+    color: #007bff; /* Custom label color */
+  }
+  
+  .contact-form-container .btn-primary {
+    background-color: #007bff; /* Custom button color */
+    border: none;
+    padding: 10px 20px; /* Adjust button padding */
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-form-container .btn-primary:hover {
+    background-color: #0056b3; /* Change button color on hover */
+  }
+  
+  .contact-form-container .text-success {
+    color: green;
+  }
+  
+  .contact-form-container .text-danger {
+    color: red;
+  }
+  
+  /* Style the success and error messages */
+  .contact-form-container p {
+    font-size: 18px; /* Increase font size for messages */
+    font-weight: 500;
+  }
+
+  .contact-form-container .btn-primary {
+    background-color: #560f5e; /* Custom background color */
+    color: rgb(209, 210, 181); /* Text color */
+    font-size: 13px; /* Increase font size */
+    padding: 10px 20px; /* Adjust padding */
+    border: 1px; /* Remove border */
+    border-radius: 20px; /* Round the corners */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+  
+  
+  

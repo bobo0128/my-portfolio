@@ -9,6 +9,7 @@ import {
   faChartPie,
   faCubes,
 } from "@fortawesome/free-solid-svg-icons";
+import homeBackground from '../images/bg-6.jpg';
 
 export const menus = [
   {
@@ -17,6 +18,7 @@ export const menus = [
     component: React.lazy(() => import("../pages/Home")),
     href: "#home",
     icon: faHouse,
+    background: homeBackground
   },
 
   {
@@ -45,7 +47,7 @@ export const menus = [
 
   {
     id: "contact",
-    textValue: "Contact Me",
+    textValue: "Contact",
     component: React.lazy(() => import("../pages/ContactMe")),
     href: "#contact",
     icon: faEnvelope,
@@ -93,15 +95,30 @@ export const skillset = [
   ),
   createSkillGroup(
     "DevOps",
-    ["Docker", "Kubernetes", "Jenkins", "CI/CD Pipelines"],
-    [2, 2, 1.5, 2]
+    ["Docker", "Kubernetes", "OpenShift", "Jenkins", "CI/CD Pipelines"],
+    [2, 0.5, 0.2, 2, 2]
+  ),
+  createSkillGroup(
+    "Database",
+    ["MySQL", "Oracle", "Sql Server", "DB2", "Vertica", "MongoDB"],
+    [2, 6, 1, 2, 2, 1]
   ),
 ];
-// const frontendSkills = ['React & Redux', 'JavaScript', 'TypeScript', 'HTML + CSS'];
-// const frontendData = [2, 10, 1, 10];
 
-// const backendSkills = ['Java', 'Spring Boot', 'Node.js', 'Express.js'];
-// const backendData = [10, 3, 2.5, 2];
 
-// const devOpsSkills = ['Docker', 'Kubernetes', 'Jenkins', 'CI/CD Pipelines'];
-// const devOpsData = [2, 2, 1.5, 2];
+export const skillsSummary = [
+  '3 years of intensive full-stack development utilizing cutting-edge technologies, including React, Node.js, and Java.',
+  '• Over 10 years of experience in Java software development.',
+  '• Strong knowledge of Java/J2EE and Spring Boot framework.',
+  '• Experienced in application/web servers like WebLogic, JBoss and Tomcat.',
+  '• Proficient in developing REST APIs',
+  '• Proficient in daily use of version control and CI/CD tools, including Git, GitLab and Jenkins, as well as project management and issue tracking using Jira.',
+  '• Experienced with relational and non-relational databases such as Oracle, SQL Server, DB2, MySQL, Vertica and MongoDB.',
+  '• Knowledgeable in authentication and authorization protocols, such as OAUTH',
+  '• Extensive experience in developing and managing microservices architectures',
+  '• Experienced with DevOps essential tools like Docker, Git, Jenkins and Kubernetes',
+  '• Experience in creating Docker Containers from scratch and automating build and development processes using shell scripting',
+  '• Extensive experience in Agile environments using Scrum, actively participating in spring planning, spring reviews, spring resrospectives, and backlog grooming.',
+  '• Extensive experience with a wide range of tools like Chrome DevTools and postman.',
+  '• Experienced in architectural design, addressing non-functional requirements such as scalability, performance, and security, and conducting solution design risk assessments to identify and mitigate potential issues.',
+];

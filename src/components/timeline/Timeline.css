@@ -1,0 +1,71 @@
+/* Timeline.css */
+.timeline-heading {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  
+  .timeline-container {
+    margin: 0 auto;
+  }
+  
+  /* Even timeline elements (alternate background color) */
+  .even-timeline-element .vertical-timeline-element-content {
+    background-color: #080340;
+    color: rgb(228, 216, 151);
+  }
+  
+  /* Odd timeline elements */
+  .odd-timeline-element .vertical-timeline-element-content {
+    background-color: rgb(226, 161, 214);
+    color: black;
+  }
+  
+  /* Arrow style */
+  .vertical-timeline-element-content-arrow {
+    border-right: 7px solid #3498db;
+  }
+  
+  .timeline-icon {
+    background: white;
+    color: #3498db;
+    /* border: 2px solid #3498db; */
+    width: 40px;  /* Define the size of the circle */
+    height: 40px; /* Make height equal to width for a circle */
+    border-radius: 50%; /* Make it a perfect circle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 4px;
+    overflow: hidden; /* Ensure the image doesn't overflow the circle */
+}
+
+.timeline-icon img {
+    width: 100%;  /* Make the image scale to fit the width of the circle */
+    height: 100%; /* Ensure the image fills the height of the circle */
+    object-fit: cover; /* Ensures the image is resized to cover the circle without distortion */
+    border-radius: 50%; /* This ensures the image remains circular */
+}
+
+
+  
+  /* Date container styling */
+  .timeline-date {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    color:white;
+  }
+  
+  /* Title and subtitle styles */
+  .timeline-title {
+    font-weight: bold;
+    font-size:large;
+  }
+  
+  .timeline-subtitle {
+    font-style: italic;
+    font-size: medium;
+  }
+  

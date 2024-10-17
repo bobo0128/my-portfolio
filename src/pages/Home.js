@@ -3,20 +3,11 @@ import FlipBook from "../components/flipbook/FlipBook";
 import { Container, Row, Col } from "react-bootstrap";
 import './Home.css'
 
-function Home() {
+function Home(background) {
+  const backgroundImg = background? `url($background)`: "";
   return (
-    <div >
+    <div style={{backgroundImage: backgroundImg}}>
       <Container fluid>
-        {/* Top Part */}
-        <Row className="text-center">
-          <Col>
-            <h3 className="intro-text">
-              Hi, I am Yingbo. A Software Engineer. A full-stack developer. 
-              {/* <span className="hello-wave">👋</span> */}
-            </h3>
-          </Col>
-        </Row>
-
         {/* Bottom Part: Book */}
         <Row className="justify-content-center">
           <Col className="book-container">

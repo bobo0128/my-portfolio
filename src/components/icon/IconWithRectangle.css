@@ -1,0 +1,80 @@
+/* Base styling for the rectangular button */
+.icon-rect {
+  display: inline-flex;
+  flex-direction: row; /* Align icon and text horizontally */
+  align-items: center;
+  justify-content: flex-start;
+  color: transparent; /* Text will get its color from the gradient */
+  font-size: 24px;
+  padding: 10px 5px; /* Padding for spacing */
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  position: relative;
+  margin-bottom: 0px;
+  cursor: pointer;
+  white-space: nowrap; /* Prevent text from wrapping */
+  flex-shrink: 0; /* Prevent shrinking */
+
+  /* Text gradient color */
+  background: linear-gradient(90deg, #f0e656, #78c02c); /* Change these colors as needed */
+  -webkit-background-clip: text; /* Clip the background to the text */
+  -webkit-text-fill-color: transparent; /* Make the text fill color transparent to show the gradient */
+  background-clip: text;
+}
+
+/* Optional: Add hover or active state */
+.icon-rect:hover {
+  transform: scale(1.05);
+}
+
+/* Text styling (vertical alignment) */
+.button-text {
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+  /* writing-mode: vertical-rl;
+  transform: rotate(180deg); */
+  text-align: center;
+}
+
+
+/* Active state */
+.icon-rect.active {
+  background: linear-gradient(90deg, #f78da7, #9b59b6); /* Gradient color after click */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transform: scale(1.05); /* Optional, to emphasize active state */
+}
+
+/* Flashlight animation */
+@keyframes flashlightGlow {
+  0% {
+    box-shadow: 0 6px 8px rgba(255, 255, 255, 0.1),
+                inset 0 1px 3px rgba(255, 255, 255, 0.1);
+  }
+  50% {
+    box-shadow: 0 6px 8px rgba(255, 255, 255, 0.9),
+                inset 0 1px 3px rgba(255, 255, 255, 0.8);
+  }
+  100% {
+    box-shadow: 0 6px 8px rgba(255, 255, 255, 0.1),
+                inset 0 1px 3px rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* Tooltip text that appears on hover */
+.icon-rect::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+}

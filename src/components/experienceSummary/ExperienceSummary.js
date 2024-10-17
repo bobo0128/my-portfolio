@@ -1,12 +1,11 @@
 import React from 'react';
+import './ExperienceSummary.css';
+import '../../pages/Home.css';
 
 const ExperienceSummary = () => {
   return (
     <div className="experience-summary">
-      <h2>Work experience and Education</h2>
-      <p>
-        I have over 10 years of experience as a software engineer with a focus on full-stack development...
-      </p>
+      <h3 className='intro-text'>Work experience and Education</h3>
     </div>
   );
 };
