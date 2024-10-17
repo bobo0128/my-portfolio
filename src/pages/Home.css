@@ -1,7 +1,7 @@
 .intro-text {
     font-size: 2rem;
     font-weight: bold;
-    background: linear-gradient(90deg, white, #8dc2dd, white);
+    background: linear-gradient(90deg, white, #ad26e7, rgb(248, 227, 187));
     background-size: 200% 100%; /* Animate across the full width */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

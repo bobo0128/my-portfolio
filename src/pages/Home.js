@@ -3,9 +3,10 @@ import FlipBook from "../components/flipbook/FlipBook";
 import { Container, Row, Col } from "react-bootstrap";
 import './Home.css'
 
-function Home() {
+function Home(background) {
+  const backgroundImg = background? `url($background)`: "";
   return (
-    <div >
+    <div style={{backgroundImage: backgroundImg}}>
       <Container fluid>
         {/* Bottom Part: Book */}
         <Row className="justify-content-center">

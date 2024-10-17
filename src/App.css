@@ -21,7 +21,6 @@ header.navbar-social-container {
   position: fixed;
   top: 0;
   z-index: 1000;
-  background-color: transparent;
 }
 
 .nav-social-container {
@@ -48,9 +47,21 @@ header.navbar-social-container {
 }
 
 .logo {
-  flex: 1; /* Logo on the left */
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
   text-align: left;
-  background-color: white;
+  height: 100%;
+}
+
+.logo img {
+  height: 10vh; /* Adjust based on desired size */
+  object-fit: contain; /* Keeps the aspect ratio */
+  padding-left: 0px; /* Add some padding from the left edge */
+  border-radius: 50px;
+  margin-top: 20px;
+  
 }
 
 

@@ -1,9 +1,21 @@
-import ContactForm from '../components/contact/ContactForm';
+import React from "react";
+import ContactForm from "../components/contact/ContactForm";
+import GoogleMapIframe from "../components/googleMap/GoogleMap";
+import "./ContactMe.css"; // Include your styles here
 
-function ContactMe() {
+const ContactMe = () => {
   return (
-    <ContactForm />
+    <div className="contact-page">
+      <div className="contact-content">
+        <div className="contact-form">
+          <ContactForm />
+        </div>
+        <div className="contact-map">
+          <GoogleMapIframe />
+        </div>
+      </div>
+    </div>
   );
-}
+};
 
 export default ContactMe;

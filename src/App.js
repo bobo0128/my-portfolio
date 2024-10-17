@@ -45,7 +45,9 @@ function App() {
       {/* <VideoBackground /> */}
       <div className="background-overlay"></div>
       <header className="navbar-social-container">
-        <div className="logo">My Logo</div>
+        <div className="logo">
+          <img src={process.env.PUBLIC_URL + "/logo/mylogo.webp"} alt="Logo" />
+        </div>
         <div className="nav-social-container">
           <Navbar
             activeSection={activeSecion}
@@ -60,10 +62,10 @@ function App() {
       {/* <Suspense fallback={<div>Loading...</div>}> */}
       <div className="content">
         {menus.map((menu, index) => {
-          const { id, component: Component } = menu;
+          const { id, component: Component, background } = menu;
           return (
             <section id={id} key={id}>
-              <Component />
+              <Component background={background} />
             </section>
           );
         })}

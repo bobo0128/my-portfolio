@@ -1,10 +1,16 @@
-/* .ringchart h3 {
-    font-size: 1.5em;
-} */
+.ringchart {
+    /* background: linear-gradient(to right, rgb(18, 194, 233), rgb(196, 113, 237), rgb(246, 79, 89)); */
+    /* background: linear-gradient(to right, rgb(116, 235, 213,0.6), rgb(172, 182, 229)); */
+    /* background: linear-gradient(to right, rgb(217, 167, 199), rgb(255, 252, 220)); */
+    /* background: linear-gradient(to right, rgb(240, 242, 240), rgb(0, 12, 64)); */
+    background: linear-gradient(to right, rgb(148, 142, 153,0.6), rgb(76, 30, 91,0.6));
+    /* background: linear-gradient(to right, rgb(254, 172, 94), rgb(199, 121, 208), rgb(75, 192, 200)); */
+    border-radius: 20px;
+}
 
 .chart-title {
-    margin-top: 20px;
-    margin-bottom: 0px; /* Adjust this value to make the title closer */
+    margin-top: 30px;
+    margin-bottom: -40px; /* Adjust this value to make the title closer */
     color: white;
     font-size: 1.5rem; /* You can adjust the font size if needed */
     text-align: center;

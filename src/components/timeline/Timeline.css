@@ -13,13 +13,13 @@
   
   /* Even timeline elements (alternate background color) */
   .even-timeline-element .vertical-timeline-element-content {
-    background-color: #c081d3;
-    color: black;
+    background-color: #080340;
+    color: rgb(228, 216, 151);
   }
   
   /* Odd timeline elements */
   .odd-timeline-element .vertical-timeline-element-content {
-    background-color: white;
+    background-color: rgb(226, 161, 214);
     color: black;
   }
   
