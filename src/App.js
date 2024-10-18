@@ -42,11 +42,8 @@ function App() {
 
   return (
     <div className="app">
-      {/* <VideoBackground /> */}
-      <div className="background-overlay"></div>
       <header className="navbar-social-container">
         <div className="logo">
-          <img src={process.env.PUBLIC_URL + "/logo/mylogo.webp"} alt="Logo" />
         </div>
         <div className="nav-social-container">
           <Navbar
