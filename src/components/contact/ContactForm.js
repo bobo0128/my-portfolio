@@ -1,8 +1,7 @@
 import React, { useState, useRef } from "react";
-import { Form, Button, Row, Col } from "react-bootstrap";
 import emailjs from "@emailjs/browser";
 import Spinner from "../spinner/Spinner";
-import '../../pages/ContactMe.css';
+import "./ContactForm.css";
 
 const formObj = {
   user_name: "",
@@ -57,79 +56,50 @@ const ContactForm = () => {
       });
   };
 
-
   return (
-    <div className="contact-form-container border p-4">
-      <Form
-        ref={formRef}
-        onSubmit={handleSubmit}
-        className="p-3"
-      >
-        <Row>
-          <Col xs={12} md={6}>
-            <Form.Group controlId="user_name" className="mb-3">
-              <Form.Control
-                type="text"
-                placeholder="Your name"
-                name="user_name"
-                value={formData.user_name}
-                onChange={handleChange}
-                required
-              />
-            </Form.Group>
-          </Col>
-          <Col xs={12} md={6}>
-            <Form.Group controlId="user_email" className="mb-3">
-              <Form.Control
-                type="email"
-                placeholder="Your email"
-                name="user_email"
-                value={formData.user_email}
-                onChange={handleChange}
-                required
-              />
-            </Form.Group>
-          </Col>
-        </Row>
-
-        <Row>
-          <Col xs={12} md={12}>
-            <Form.Group controlId="user_subject" className="mb-3">
-              <Form.Control
-                type="text"
-                placeholder="Subject"
-                name="user_subject"
-                value={formData.user_subject}
-                onChange={handleChange}
-                required
-              />
-            </Form.Group>
-          </Col>
-        </Row>
-        <Form.Group controlId="message" className="mb-3">
-          <Form.Control
-            as="textarea"
-            rows={4}
-            placeholder="Your message"
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            required
-          />
-        </Form.Group>
-        <div className="text-center">
-          <Button variant="primary" type="submit" disabled={loading} >
-            {loading ? <Spinner animation="border" size="sm" /> : "Send Message"}
-          </Button>
-        </div>
-      </Form>
+    <form ref={formRef} className="contact-form" onSubmit={handleSubmit}>
+      <input
+        type="text"
+        name="user_name"
+        value={formData.user_name}
+        onChange={handleChange}
+        placeholder="Your Name"
+        required
+      />
+      <input
+        type="email"
+        name="user_email"
+        value={formData.user_email}
+        onChange={handleChange}
+        placeholder="Email"
+        required
+      />
+      <input
+        type="text"
+        name="user_subject"
+        value={formData.user_subject}
+        onChange={handleChange}
+        placeholder="Phone"
+      />
+      <textarea
+        name="message"
+        value={formData.message}
+        onChange={handleChange}
+        placeholder="Message"
+        rows="4"
+        required
+      />
+      <button type="submit" disabled={loading}>
+        {loading ? <Spinner animation="border" size="sm" /> : "Send Message"}
+      </button>
       {submitted && !loading && (
         <p className="mt-3 text-success text-center">
           Thank you for contacting me!
         </p>
       )}
       {error && <p className="mt-3 text-danger text-center">{error}</p>}
-    </div>
+    
+    </form>
   );
 };
 

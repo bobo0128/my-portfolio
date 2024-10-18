@@ -1,156 +1,58 @@
+/* Overall page styles */
 .contact-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    margin-top: 30px;
-    box-sizing: border-box;
-    height: 50vh; /* Set the entire contact section to take up 50% of the viewport height */
-  }
-  
+  padding: 20px;
+  max-height: 100vh;
+  background-color: #121212; /* Dark background */
+  color: white;
+  width: 60%;
+}
+
+/* Title style */
+.contact-title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.contact-description {
+  text-align: center;
+  margin: 10px 0 20px;
+  font-size: 16px;
+  color: #f0f0f0; /* Adjust the color to match your theme */
+  max-width: 800px; /* Make it narrower for a better visual layout */
+  margin-left: auto;
+  margin-right: auto; /* Centers the description */
+  line-height: 1.6;
+}
+
+
+/* Flexbox layout for the contact form and map */
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap; /* Makes it stack vertically on smaller screens */
+}
+
+/* Same size for both ContactForm and GoogleMap */
+.contact-form,
+.contact-map {
+  flex: 1;
+  margin: 10px;
+  height: 400px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
   .contact-content {
-    display: flex;
-    justify-content: space-between;
-    /* align-items: stretch; */
-    width: 100%;
-    height: 100%; /* Ensure it takes up 100% of the parent's height (50vh) */
-    max-width: 1200px;
+    flex-direction: column;
   }
-  
-  .contact-form, 
+
+  .contact-form,
   .contact-map {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    height: 100%; /* Ensure both the form and map containers are the same height */
-  }
-  
-  .contact-form {
-    margin-right: 20px; /* Adds spacing between form and map */
-  }
-  
-  .contact-form form {
-    height: 100%; /* Ensure the form inside takes the full height of the parent container */
-  }
-
-  .contact-form-container .form-control::placeholder {
-    color: #7a969a;
-    font-size: small;
-  }
-  
-  .contact-map-container {
-    flex: 1;
-    height: 100%; /* Ensure the map container takes up the full height */
     width: 100%;
-    background-color: #f0f0f0;
-    margin-left: 10px;
-    border-radius: 8px;
-    overflow: hidden;
+    height: auto;
   }
-  
-  .contact-map-container iframe {
-    width: 100%;
-    height: 100%; /* Ensure the iframe takes up the full height of the container */
-    border: 0;
-    border-radius: 8px;
-  }
-  
-  /* Responsive styles */
-  @media (max-width: 768px) {
-    .contact-content {
-      flex-direction: column;
-      height: auto; /* Allow content to adapt to the screen size */
-    }
-  
-    .contact-form {
-      margin-right: 0;
-      margin-bottom: 20px;
-    }
-  
-    .contact-map-container {
-      height: 300px; /* Set a fixed height for the map container on smaller screens */
-    }
-  }
-
-  .contact-form {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Ensure spacing between inputs */
-    height: 100%; /* Make form take 100% of available height */
-    margin-right: 20px; /* Adds spacing between form and map */
-  }
-  
-  .contact-form form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Spread the form elements vertically */
-    height: 100%; /* Make form take 100% of parent */
-  }
-  
-  .contact-form .form-control {
-    flex: 1; /* Make input fields grow and shrink dynamically */
-    font-size: 0.8rem; /* Responsive text size */
-    padding: 10px; /* Consistent padding */
-    margin-bottom: 10px; /* Spacing between input fields */
-    border-radius: 10px;
-    border: 1px solid #ddd; /* Subtle border */
-    box-sizing: border-box;
-  }
-  
-  .contact-form .form-control:last-child {
-    margin-bottom: 0; /* Remove last margin */
-  }
-
-  
-  .contact-form .btn-primary {
-    padding: 10px;
-    font-size: 1rem;
-    border-radius: 8px;
-    cursor: pointer;
-    background-color: #560f5e;
-    color: rgb(209, 210, 181);
-    border: none;
-    width: 100%;
-    box-sizing: border-box;
-    margin-top: 10px;
-  }
-  
-  .contact-form .btn-primary:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Responsive styles */
-  @media (max-width: 768px) {
-    .contact-form {
-      margin-right: 0;
-      margin-bottom: 20px;
-    }
-  
-    .contact-form form {
-      height: auto; /* Allow form to adjust height dynamically */
-    }
-  
-    .contact-form .form-control {
-      font-size: 0.9rem; /* Slightly smaller text size on smaller screens */
-      padding: 8px;
-    }
-  
-    .contact-form .btn-primary {
-      font-size: 0.9rem; /* Adjust button text size */
-      padding: 8px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .contact-form .form-control {
-      font-size: 0.8rem;
-      padding: 7px;
-    }
-  
-    .contact-form .btn-primary {
-      font-size: 0.8rem;
-      padding: 7px;
-    }
-  }
-  
+}
