@@ -389,7 +389,7 @@ const ProjectCard = () => {
           <div class="card" id="5">
             <div class="image-container"></div>
             <p>
-              More practices are coming ......
+              LEARN. UNLEARN. RELEARN Learning Never Ends, more practices on the way ......
             </p>
           </div>
         </div>

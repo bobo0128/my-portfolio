@@ -1,57 +1,55 @@
-/* Modal background */
-.modal {
+/* Modal overlay covers the entire viewport */
+.modal-overlay {
+    position: fixed; /* Ensure the modal is fixed relative to the viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark overlay behind modal */
+    z-index: 1000; /* Make sure it's above the carousel */
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Dark background with transparency */
-    animation: fadeIn 0.8s ease-in-out; /* Animation for the modal to fade in */
   }
   
-  /* Modal content box */
+  /* Modal content */
   .modal-content {
     background-color: white;
-    padding: 20px;
+    width: 80vw; /* 80% of the viewport width */
+    height: 80vh; /* 80% of the viewport height */
+    overflow: hidden; /* Hide overflowing content */
     border-radius: 10px;
-    width: 80%;
-    max-width: 700px;
-    opacity: 0;
-    animation: slideDown 0.8s ease-in-out forwards;
+    z-index: 1001;
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Make content flow vertically */
   }
   
-  /* Close button */
-  .close-button {
+  /* Scrollable content inside the modal */
+  .modal-scrollable-content {
+    flex: 1; /* Make this take up remaining height */
+    overflow-y: auto; /* Enable vertical scrolling if content exceeds modal height */
+    padding: 0; /* Remove padding to avoid iframe constraints */
+  }
+  
+  /* Iframe should take up 100% of its container's dimensions */
+  .modal-scrollable-content iframe {
+    width: 100%; /* Full width of the parent */
+    height: 100%; /* Full height of the parent */
+    border: none; /* Remove default iframe borders */
+  }
+  
+  /* Close button styling */
+  .modal-close {
     position: absolute;
-    right: 20px;
     top: 10px;
-    font-size: 24px;
+    right: 20px;
+    background-color: #f44336; /* Red close button */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
     cursor: pointer;
-    color: #333;
-  }
-  
-  /* Animations */
-  @keyframes fadeIn {
-    from {
-      background-color: rgba(0, 0, 0, 0);
-    }
-    to {
-      background-color: rgba(0, 0, 0, 0.8);
-    }
-  }
-  
-  @keyframes slideDown {
-    from {
-      transform: translateY(-50%);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
+    z-index: 1002; /* Ensure the button is always clickable */
   }
   

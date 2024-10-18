@@ -12,14 +12,17 @@ const Modal = ({ isOpen, onClose, contentURL }) => {
         <button className="modal-close" onClick={onClose}>
           Close
         </button>
-        {/* Dynamically load content via iframe */}
-        <iframe
-          src={contentURL}
-          title="Dynamic Content"
-          width="100%"
-          height="500px"
-          frameBorder="0"
-        />
+        {/* Dynamically load content via iframe and make it scrollable */}
+        <div className="modal-scrollable-content">
+          <iframe
+            src={contentURL}
+            title="Dynamic Content"
+            width="100%"
+            height="100%"
+            frameBorder="0"
+            style={{ display: "block" }}
+          />
+        </div>
       </div>
     </div>
   );

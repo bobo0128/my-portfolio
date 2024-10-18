@@ -5,6 +5,7 @@
   background-color: #121212; /* Dark background */
   color: white;
   width: 60%;
+  border-radius: 10%;
 }
 
 /* Title style */
@@ -34,6 +35,7 @@
   max-width: 1200px;
   margin: 0 auto;
   flex-wrap: wrap; /* Makes it stack vertically on smaller screens */
+  border-radius: 20%;
 }
 
 /* Same size for both ContactForm and GoogleMap */
