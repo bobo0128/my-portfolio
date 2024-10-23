@@ -48,6 +48,17 @@
   padding: 5px 5px !important;
 }
 
+/* Hide the full navbar on small screens and show the hamburger menu */
+.d-lg-none {
+  display: none !important; /* Hide the element on large screens */
+}
+
+/* Show the full navbar on large screens */
+.d-lg-flex {
+  display: flex !important;
+}
+
+
 /* Optional: Add some padding and margin for larger screen */
 @media (min-width: 992px) {
   .menu-links .nav-link {

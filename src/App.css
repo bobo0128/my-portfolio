@@ -107,6 +107,9 @@ section {
   .app {
     flex-direction: column; /* Change layout direction */
   }
+  .logo {
+    display: none;  /* Hide the logo on small screens */
+  }
 
    .navbar {
     width: 100%; /* Full width */
@@ -128,6 +131,18 @@ section {
   /* Even smaller screens */
   .content {
     padding: 5px;
+  }
+
+  .logo {
+    display: none;  /* Hide the logo on small screens */
+  }
+
+  .social-media-icons {
+    display: none;  /* Hide social media icons on small screens */
+  }
+
+  .nav-social-container {
+    width: 100%;  /* Ensure navbar takes full width */
   }
 
   .navbar {
